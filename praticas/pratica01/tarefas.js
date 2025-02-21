@@ -1,7 +1,6 @@
 const tarefas = [
-    { id: 1739220546861, nome: "Estudar JavaScript", concluida: false }
+    { id: 1739220546861, nome: "Estudar JavaScript", concluida: false, }
 ]
-tarefas.push(novaTarefa)
 
 function listarTarefas() {
     return tarefas
@@ -12,7 +11,9 @@ function adicionarTarefa(nomeTarefa) {
         id: Date.now().toString(),
         nome: nomeTarefa,
         cncluida: false
+        
     }
+    tarefas.push(novaTarefa)
 }
 
 function removerTarefa(idTarefa) {
@@ -24,9 +25,9 @@ function removerTarefa(idTarefa) {
 
 function modificarTarefa(idTarefa, tarefaModificada) {
     const tarefaLocalizada = tarefas.find(tarefa => tarefa.id === idTarefa)
-    if (tarefaLocalizada){
+    if (tarefaLocalizada) {
         Object.assign(tarefaLocalizada, tarefaModificada)
     }
 }
 
-export {listarTarefas, adicionarTarefa, removerTarefa, modificarTarefa}
+export { listarTarefas, adicionarTarefa, removerTarefa, modificarTarefa }
