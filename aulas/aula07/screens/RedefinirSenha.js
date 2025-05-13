@@ -1,8 +1,12 @@
 import { useState } from "react";
 import { View } from "react-native";
 import { TextInput, Button, HelperText } from "react-native-paper";
+import * as Yup from 'yup'
 
 function RedefinirSenha() {
+    const schema = Yup.object().shape({
+        email: Yup.string().required("E-mail é obrigatorio").email("E-mail é invalido"),
+    })
     const [email, setEmail] = useState("");
     const [erro, setErro] = useState("");
 
