@@ -1,7 +1,9 @@
+import { useEffect } from "react";
 import { View } from "react-native";
 import ListaVertical
     from "../components/ListaVertical";
 import ListaHorizontal from "../components/ListaHorizontal";
+import { useEffect } from "react";
 
 function Home() {
     return (

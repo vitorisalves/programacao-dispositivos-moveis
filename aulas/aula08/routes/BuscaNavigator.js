@@ -1,13 +1,17 @@
-import {createNativeStackNavigator} from "@react-navigator/native-stack"
-import Categorias from "../screens/Categorias"
-import Lojas from "../screens/Lojas"
-const Stack = createNativeStackNavigator()
+import { createNativeStackNavigator } 
+    from "@react-navigation/native-stack";
+import Categorias from "../screens/Categorias";
+import Lojas from "../screens/Lojas";
+
+const Stack = createNativeStackNavigator();
 
 function BuscaNavigator() {
-    return(
-        <Stack.Navigator>
-            <Stack.Screen name="Categorias" components={Categorias}/>
-            <Stack.Screen name="Lojas" components={Lojas}/>
-        </Stack.Navigator>
-    )
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Categorias" component={Categorias} />
+      <Stack.Screen name="Lojas" component={Lojas} />
+    </Stack.Navigator>
+  );
 }
+
+export default BuscaNavigator;
